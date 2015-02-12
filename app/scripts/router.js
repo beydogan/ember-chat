@@ -1,3 +1,6 @@
 EmberChat.Router.map(function () {
-  // Add your routes here
+  this.route("index", { path: "/" });
+  this.resource('channels', function() {
+    this.route('connect');
+  });
 });
