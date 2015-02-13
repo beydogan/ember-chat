@@ -1,8 +1,22 @@
-{{title}} eee 
+{{title}}  
 
-{{input
-  type="text"
-  id="connect-channel"
-  placeholder="Channel Name?"
-  value=newChannelName
-  action="connect"}}
+<div class="row">
+    <div class="col-md-offset-4 col-md-4">
+		<form class="form-horizontal" {{action "connect" on="submit"}}>
+			<div class="login">
+				<div class="form-group">
+					<label>Username:</label>
+					{{input value=username class="form-control"}}
+				</div>
+				<div class="form-group">
+					<label>Channel:</label>
+
+					{{input value=channel_id class="form-control"}}
+				</div>
+				<div class="form-group">
+					 <input type="submit" class="btn btn-primary btn-block" name="setUsername" value="CONNECT" />
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
