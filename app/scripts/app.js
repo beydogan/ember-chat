@@ -1,6 +1,13 @@
-var EmberChat = window.EmberChat = Ember.Application.create({
-	  LOG_TRANSITIONS: true
+require('scripts/libs/*');
 
+var EmberChat = window.EmberChat = Ember.Application.create({
+  	LOG_TRANSITIONS: true,
+	Socket: EmberSockets.extend({
+	        host: 'localhost',
+	        port: 5000,
+	        controllers: ['channels_connect', 'dogs', 'rabbits'],
+            autoConnect: true
+	    })
 });
 
 /* Order and include as you please. */
