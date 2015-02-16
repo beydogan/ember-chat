@@ -5,7 +5,7 @@ var EmberChat = window.EmberChat = Ember.Application.create({
 	Socket: EmberSockets.extend({
 	        host: 'localhost',
 	        port: 5000,
-	        controllers: ['channels_connect', 'dogs', 'rabbits'],
+	        controllers: ['channels_connect', 'channel'],
             autoConnect: true
 	    })
 });
